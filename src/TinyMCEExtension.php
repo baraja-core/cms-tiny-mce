@@ -36,9 +36,12 @@ final class TinyMCEExtension extends CompilerExtension
 	{
 		$builder = $this->getContainerBuilder();
 
+		/** @var mixed[] $config */
+		$config = $this->getConfig();
+
 		$builder->addDefinition($this->prefix('tinyMCEAsset'))
 			->setFactory(TinyMCEAsset::class)
-			->setArgument('apiKey', $this->config['apiKey'] ?? null);
+			->setArgument('apiKey', $config['apiKey'] ?? null);
 
 		/** @var ServiceDefinition $manager */
 		$manager = $builder->getDefinitionByType(CustomGlobalAssetManager::class);

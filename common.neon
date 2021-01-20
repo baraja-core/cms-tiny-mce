@@ -1,0 +1,2 @@
+extensions:
+	tinyMCE: Baraja\TinyMCE\TinyMCEExtension

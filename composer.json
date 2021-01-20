@@ -1,0 +1,33 @@
+{
+	"name": "baraja-core/cms-tiny-mce",
+	"description": "Smart TinyMCE extension to Baraja CMS.",
+	"homepage": "https://github.com/baraja-core/cms-tiny-mce",
+	"authors": [
+		{
+			"name": "Jan Barášek",
+			"homepage": "https://baraja.cz"
+		}
+	],
+	"require": {
+		"php": ">=7.4.0",
+		"baraja-core/cms": "^2.3"
+	},
+	"require-dev": {
+		"phpstan/phpstan": "^0.12.18",
+		"tracy/tracy": "^2.7",
+		"phpstan/phpstan-nette": "^0.12.6",
+		"symplify/easy-coding-standard": "^7.2",
+		"spaze/phpstan-disallowed-calls": "^1.1"
+	},
+	"autoload": {
+		"classmap": [
+			"src/"
+		]
+	},
+	"scripts": {
+		"phpstan": [
+			"vendor/bin/phpstan analyse src -c phpstan.neon --level 8 --no-progress"
+		]
+	},
+	"minimum-stability": "stable"
+}

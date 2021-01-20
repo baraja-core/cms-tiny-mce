@@ -18,7 +18,7 @@ final class TinyMCEExtension extends CompilerExtension
 	/**
 	 * @return string[]
 	 */
-	public static function mustBeDefinedBefore(): array
+	public static function mustBeDefinedAfter(): array
 	{
 		return [CmsExtension::class];
 	}

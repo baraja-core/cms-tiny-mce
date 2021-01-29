@@ -14,7 +14,6 @@ use Nette\Schema\Schema;
 
 final class TinyMCEExtension extends CompilerExtension
 {
-
 	/**
 	 * @return string[]
 	 */

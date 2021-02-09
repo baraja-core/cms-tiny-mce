@@ -9,7 +9,7 @@
 		}
 	],
 	"require": {
-		"php": "^7.4 || ^8.0",
+		"php": "^8.0",
 		"baraja-core/cms": "^2.3"
 	},
 	"require-dev": {

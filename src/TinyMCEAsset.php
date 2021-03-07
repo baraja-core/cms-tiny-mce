@@ -35,7 +35,7 @@ final class TinyMCEAsset implements CmsAsset
 	 */
 	private function escape(string $s, bool $double = true): string
 	{
-		if (strpos($s, '`') !== false && strpbrk($s, ' <>"\'') === false) {
+		if (str_contains($s, '`') && strpbrk($s, ' <>"\'') === false) {
 			$s .= ' '; // protection against innerHTML mXSS vulnerability nette/nette#1496
 		}
 

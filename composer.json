@@ -10,7 +10,7 @@
 	],
 	"require": {
 		"php": "^8.0",
-		"baraja-core/cms": "^3.0"
+		"baraja-core/cms": "^4.0"
 	},
 	"require-dev": {
 		"phpstan/phpstan": "^0.12.74",

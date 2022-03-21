@@ -20,7 +20,10 @@ final class TinyMCEAsset implements CmsAsset
 
 	public function getUrl(): string
 	{
-		return 'https://cdn.tiny.cloud/1/' . $this->escape($this->apiKey ?? 'no-api-key') . '/tinymce/5/tinymce.min.js';
+		return sprintf(
+			'https://cdn.tiny.cloud/1/%s/tinymce/5/tinymce.min.js',
+			$this->escape($this->apiKey ?? 'no-api-key'),
+		);
 	}
 
 
@@ -33,12 +36,12 @@ final class TinyMCEAsset implements CmsAsset
 	/**
 	 * Escapes string for use inside HTML attribute value.
 	 */
-	private function escape(string $s, bool $double = true): string
+	private function escape(string $s): string
 	{
 		if (str_contains($s, '`') && strpbrk($s, ' <>"\'') === false) {
 			$s .= ' '; // protection against innerHTML mXSS vulnerability nette/nette#1496
 		}
 
-		return htmlspecialchars($s, ENT_QUOTES, 'UTF-8', $double);
+		return htmlspecialchars($s, ENT_QUOTES);
 	}
 }
